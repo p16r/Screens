@@ -11,6 +11,7 @@
 		057C8465252CEEB300C4074A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C8464252CEEB300C4074A /* ContentView.swift */; };
 		057C8467252CEEB400C4074A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057C8466252CEEB400C4074A /* Assets.xcassets */; };
 		057C846A252CEEB400C4074A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057C8469252CEEB400C4074A /* Preview Assets.xcassets */; };
+		058E2A11252CF015006AFEC0 /* ExternalDisplayContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058E2A10252CF015006AFEC0 /* ExternalDisplayContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		057C8466252CEEB400C4074A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		057C8469252CEEB400C4074A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		057C846B252CEEB400C4074A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		058E2A10252CF015006AFEC0 /* ExternalDisplayContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDisplayContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				057C8462252CEEB300C4074A /* ScreensApp.swift */,
 				057C8464252CEEB300C4074A /* ContentView.swift */,
+				058E2A10252CF015006AFEC0 /* ExternalDisplayContent.swift */,
 				057C8466252CEEB400C4074A /* Assets.xcassets */,
 				057C846B252CEEB400C4074A /* Info.plist */,
 				057C8468252CEEB400C4074A /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				057C8465252CEEB300C4074A /* ContentView.swift in Sources */,
+				058E2A11252CF015006AFEC0 /* ExternalDisplayContent.swift in Sources */,
 				057C8463252CEEB300C4074A /* ScreensApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
