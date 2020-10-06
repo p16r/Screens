@@ -9,9 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
 
+    @EnvironmentObject var externalDisplayContent: ExternalDisplayContent
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            Form {
+                if externalDisplayContent.isShowingOnExternalDisplay == false {
+                    Section(header: Text("Output")) {
+                        Text(externalDisplayContent.string)
+                    }
+                }
+                Section(header: Text("Input")) {
+                    TextField("Text", text: $externalDisplayContent.string)
+                }
+            }
+            .navigationTitle("Screens")
+        }
     }
 
 }

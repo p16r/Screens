@@ -10,9 +10,12 @@ import SwiftUI
 @main
 struct ScreensApp: App {
 
+    @ObservedObject var externalDisplayContent = ExternalDisplayContent()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(externalDisplayContent)
         }
     }
 
