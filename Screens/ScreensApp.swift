@@ -62,7 +62,7 @@ struct ScreensApp: App {
     }
 
     private func screenDidDisconnect(_ screen: UIScreen) {
-        //  Coming soon…
+        additionalWindows.removeAll { $0.screen == screen }
         externalDisplayContent.isShowingOnExternalDisplay = false
     }
 
