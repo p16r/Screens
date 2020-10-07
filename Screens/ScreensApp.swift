@@ -12,6 +12,7 @@ import SwiftUI
 struct ScreensApp: App {
 
     @ObservedObject var externalDisplayContent = ExternalDisplayContent()
+    @State var additionalWindows: [UIWindow] = []
 
     private var screenDidConnectPublisher: AnyPublisher<UIScreen, Never> {
         NotificationCenter.default
@@ -45,7 +46,18 @@ struct ScreensApp: App {
     }
 
     private func screenDidConnect(_ screen: UIScreen) {
-        //  Coming soon…
+        let window = UIWindow(frame: screen.bounds)
+
+        window.windowScene = UIApplication.shared.connectedScenes
+            .first { ($0 as? UIWindowScene)?.screen == screen }
+            as? UIWindowScene
+
+        let view = ExternalView()
+            .environmentObject(externalDisplayContent)
+        let controller = UIHostingController(rootView: view)
+        window.rootViewController = controller
+        window.isHidden = false
+        additionalWindows.append(window)
         externalDisplayContent.isShowingOnExternalDisplay = true
     }
 
